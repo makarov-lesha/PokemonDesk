@@ -1,6 +1,5 @@
 import React from 'react';
-import s from './App.modules.scss';
-import './custom.css';
+import s from './App.module.scss';
 import clx from 'classnames';
 
 import About from './About';
