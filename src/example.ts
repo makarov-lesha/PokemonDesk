@@ -31,7 +31,7 @@ interface MyArray<T> {
 	[n: number]: T;
 
 	map<U>(fn: (el: T) => U): U[];
-	reduce<U>(fn: (accum: U, el: T) => U, initialValue?: T): U;
+	reduce<U>(fn: (accum: U, el: T) => U, initialValue?: U): U;
 }
 
 // array.map(function(currentValue, index, arr), thisValue);
