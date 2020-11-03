@@ -1,3 +1,21 @@
-.header {
-    color: 64px;
+.wrapper {
+  display: grid;
+
+  grid-template-columns: 1fr;
+  grid-template-rows:
+    93px
+    1fr
+    auto;
+  grid-template-areas:
+    'header'
+    'content'
+    'footer';
+  min-height: 100vh;
+}
+
+.content {
+  display: grid;
+  grid-area: content;
+  align-items: center;
+  justify-items: center;
 }

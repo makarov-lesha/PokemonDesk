@@ -1,20 +1,18 @@
 import React from 'react';
-import clx from 'classnames';
+// import clx from 'classnames';
 import s from './App.module.scss';
 
-// import Header from './components/Header';
+import Header from './components/Header';
 import Footer from './components/Footer';
 
-import About from './About';
-
 const App = () => {
-    return (
-        <>
-            <div className={clx(s.header, 'color')}>Hello, this is App Component!!!</div>
-            <About />
-            <Footer />
-        </>
-    );
+  return (
+    <div className={s.wrapper}>
+      <Header />
+      <div className={s.content}>Content</div>
+      <Footer />
+    </div>
+  );
 };
 
 export default App;

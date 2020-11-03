@@ -1,3 +1,8 @@
-.test {
-    font-size: 64px;
+.header {
+  display: grid;
+  grid-area: header;
+  background-color: #f5db13;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
+  align-items: center;
+  justify-items: center;
 }
