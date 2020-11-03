@@ -3,7 +3,12 @@ import React from 'react';
 import s from './Footer.module.scss';
 
 const Footer = () => {
-  return <div className={s.footer}>Footer</div>;
+  return (
+    <div className={s.footer}>
+      <div>Made with love</div>
+      <div className={s.team}>Our Team</div>
+    </div>
+  );
 };
 
 export default Footer;

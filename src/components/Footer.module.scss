@@ -1,7 +1,38 @@
 .footer {
   display: grid;
   grid-area: footer;
-  align-items: center;
+  //   align-items: center;
+  //   justify-items: center;
+  margin: 7px;
+  grid-gap: 10px;
+  grid-template-rows: auto auto;
+  grid-template-columns: auto;
   justify-items: center;
-  margin: 1rem;
+
+  @media (min-width: 375px) {
+    grid-template-rows: auto;
+    align-self: center;
+    grid-template-columns: auto auto;
+    // justify-items: space-between;
+    justify-content: space-between;
+    justify-self: center;
+    width: 95%;
+    max-width: 695px;
+  }
+  @media (min-width: 768px) {
+    grid-template-rows: auto;
+    align-self: center;
+    grid-template-columns: auto auto;
+    // justify-items: space-between;
+    justify-content: space-between;
+    justify-self: center;
+    width: 95%;
+    max-width: 1125px;
+  }
+}
+
+.team {
+  @media (max-width: 375px) {
+    grid-row: 1;
+  }
 }
