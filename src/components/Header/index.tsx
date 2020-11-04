@@ -1,7 +1,7 @@
 import React from 'react';
 
 import s from './Header.module.scss';
-// import { ReactComponent as PokemonLogo } from './assets/Logo.svg';
+import { ReactComponent as PokemonLogo } from './assets/Logo.svg';
 
 interface IMenu {
   id: number;
@@ -37,7 +37,9 @@ const Header = () => {
   return (
     <div className={s.root}>
       <div className={s.wrap}>
-        <div className={s.pokemonLogo}>{/* <PokemonLogo /> */}</div>
+        <div className={s.pokemonLogo}>
+          <PokemonLogo />
+        </div>
         <div className={s.menuWrap}>
           {MENU.map(({ value, link, id }) => (
             <a className={s.menuLink} href={link} key={id}>
