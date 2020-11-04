@@ -1,0 +1,46 @@
+.header {
+  grid-area: header;
+  display: grid;
+  grid-template-rows: auto 0;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  // width: calc(100% - 52px);
+  background-color: #f5db13;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
+  align-items: center;
+  justify-items: center;
+}
+
+.logo {
+  margin-left: 26px;
+  min-height: 22px;
+  min-width: 59px;
+  @media (min-width: 375px) {
+    margin-left: 20px;
+    height: 45px;
+    width: 121px;
+  }
+}
+
+.burger {
+  margin-right: 26px;
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.navgroup {
+  display: none;
+  font-family: Karla;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 29px;
+
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto;
+    margin-right: 26px;
+  }
+}

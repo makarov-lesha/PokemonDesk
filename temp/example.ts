@@ -2,53 +2,47 @@
 //## Работа с простыми типами
 
 const concatenate = (str1: string, str2: string): string => {
-	return str1 + str2;
+  return str1 + str2;
 };
 
 console.log('concatenate', concatenate('first ', 'second'));
 
 //## Работа с интерфейсами
 interface internalInterface {
-	howIDoIt: string;
-	simeArray: [s1: string, n1: number];
+  howIDoIt: string;
+  simeArray: [s1: string, n1: number];
 }
 
 interface TaskInterface {
-	howIDoIt: string;
-	simeArray: [s1: string, s2: string, n1: number];
-	withData: [el1: internalInterface];
+  howIDoIt: string;
+  simeArray: [s1: string, s2: string, n1: number];
+  withData: [el1: internalInterface];
 }
 
 const testObject: TaskInterface = {
-	howIDoIt: 'test 1',
-	simeArray: ['I do it well', 'String 2', 42],
-	withData: [{ howIDoIt: 'I Do It Wel', simeArray: ['string one', 23] }],
+  howIDoIt: 'test 1',
+  simeArray: ['I do it well', 'String 2', 42],
+  withData: [{ howIDoIt: 'I Do It Wel', simeArray: ['string one', 23] }],
 };
 
 //Типизация для метода reduce
 
 interface MyArray<T> {
-	[n: number]: T;
+  [n: number]: T;
 
-	map<U>(fn: (el: T) => U): U[];
-	reduce<U>(fn: (accum: U, el: T) => U, initialValue?: U): U;
+  map<U>(fn: (el: T) => U): U[];
+  reduce<U>(fn: (accum: U, el: T) => U, initialValue?: U): U;
 }
 
 // array.map(function(currentValue, index, arr), thisValue);
 // array.reduce(function(total, currentValue, currentIndex, arr), initialValue);
 
-const testArray: MyArray<string> = [
-	'first ',
-	'second ',
-	'third ',
-	'forth ',
-	'fifth ',
-];
+const testArray: MyArray<string> = ['first ', 'second ', 'third ', 'forth ', 'fifth '];
 testArray.reduce(sumUp, 'null ');
 console.log('testArray.reduce(sumUp)', testArray.reduce(sumUp, 'null '));
 
 function sumUp(accum: string, el: string): string {
-	return accum + el;
+  return accum + el;
 }
 
 //LESSON
@@ -63,16 +57,7 @@ function sumUp(accum: string, el: string): string {
 //
 //
 //Types (Lesson 1)
-type AllUnionTypeAlias =
-	| string
-	| number
-	| null
-	| undefined
-	| symbol
-	| void
-	| bigint
-	| object
-	| [];
+type AllUnionTypeAlias = string | number | null | undefined | symbol | void | bigint | object | [];
 
 let tsSum = (arr: number[]) => arr.reduce((a: number, b: number) => a + b);
 
@@ -100,29 +85,29 @@ const [a, b] = tsNextArr;
 //(Lesson 3)
 //Objects and Interfaces
 type TsObj = {
-	name: string;
-	birthday: number | string;
-	male?: string;
+  name: string;
+  birthday: number | string;
+  male?: string;
 };
 
 interface MyFirstInterface {
-	readonly name: string;
-	birthday: number | string;
-	male?: string;
+  readonly name: string;
+  birthday: number | string;
+  male?: string;
 }
 
 const tsObj: MyFirstInterface = {
-	name: 'Alexey',
-	birthday: 35,
+  name: 'Alexey',
+  birthday: 35,
 };
 
 interface IndexInterface {
-	[n: string]: string | number;
+  [n: string]: string | number;
 }
 
 const data: IndexInterface = {
-	key1: 'key',
-	key2: 'key33',
+  key1: 'key',
+  key2: 'key33',
 };
 
 const val3 = data.key3;
@@ -131,20 +116,20 @@ const val3 = data.key3;
 //Functions
 
 enum MethodEnum {
-	add = 'add',
-	sb = 'sub',
-	div = 'divide',
+  add = 'add',
+  sb = 'sub',
+  div = 'divide',
 }
 
 function calculate(method: MethodEnum, first: number, second: number): number {
-	switch (method) {
-		case MethodEnum.add:
-			return first + second;
-		case MethodEnum.sb:
-			return first - second;
-		default:
-			return 1;
-	}
+  switch (method) {
+    case MethodEnum.add:
+      return first + second;
+    case MethodEnum.sb:
+      return first - second;
+    default:
+      return 1;
+  }
 }
 
 calculate(MethodEnum.add, 1, 2);
@@ -158,7 +143,7 @@ const ArrowFunc: FnDefault = () => null;
 //Generics
 
 function identity<T>(value: T): T {
-	return value;
+  return value;
 }
 
 identity('333');
@@ -175,7 +160,7 @@ tsArr.map((i) => i + 1);
 tsArr.map((i) => 'df');
 
 function getLen<T extends Array<any>>(arr: T): number {
-	return arr.length;
+  return arr.length;
 }
 
 getLen([1, 2, 3]);
