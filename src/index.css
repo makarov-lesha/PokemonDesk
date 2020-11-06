@@ -1,6 +1,8 @@
 /* Box sizing rules */
 /*  */
 
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 *,
 *::before,
 *::after {
@@ -39,6 +41,7 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   background: linear-gradient(180deg, #f5db13 0%, #f2b807 100%);
+  font-family: 'Karla', sans-serif;
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */

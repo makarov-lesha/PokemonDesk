@@ -4,3 +4,17 @@
   min-height: 100vh;
   background: linear-gradient(180deg, $third 0%, $primary 100%);
 }
+
+.contentText {
+  display: flex;
+  flex-direction: column;
+}
+
+.contentWrap {
+  max-width: 1125px;
+  width: 100%;
+  display: grid;
+  margin: 100px auto 0 auto;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+}

@@ -45,16 +45,17 @@
     bottom: -8px;
     height: 1px;
     width: 1%;
-    opacity: 0;
     background: $dark;
     border: 1px solid $dark;
     border-radius: 6px;
-    transition: opacity, width ease-in-out 0.25s;
+    opacity: 0;
     left: 50%;
     transform: translate(-50%, 0);
+    transition: opacity, width ease-in-out 0.25s;
   }
 
-  &:hover {
+  &:hover,
+  &.activeLink {
     &:after {
       width: 100%;
       opacity: 1;
