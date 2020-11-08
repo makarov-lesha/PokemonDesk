@@ -16,7 +16,9 @@ function HomePage() {
             <b>Find</b> all your favorite <b>Pokemon</b>
           </h1>
           <p>You can know the type of Pokemon, its strengths, advantages, disadvantages and abilities</p>
-          <Button onClick={(e) => console.log('Click!', e)}>See pokemons</Button>
+          <Button size="narrowSize" color="yellow" fullWidth onClick={(e) => console.log('Click!', e)}>
+            See pokemons
+          </Button>
         </div>
         <Parallax />
       </Layout>
