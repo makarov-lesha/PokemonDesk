@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import s from './Header.module.scss';
 import { ReactComponent as PokemonLogo } from './assets/Logo.svg';
@@ -13,23 +14,23 @@ const MENU: IMenu[] = [
   {
     id: 1,
     value: 'Home',
-    link: '#',
+    link: '/',
   },
   {
     id: 2,
     value: 'Pokédex',
-    link: '#',
+    link: '/pokedex',
   },
   {
     id: 3,
     value: 'Legendaries',
-    link: '#',
+    link: '/legendaries',
   },
 
   {
     id: 4,
     value: 'Documentation',
-    link: '#',
+    link: '/documentation',
   },
 ];
 
@@ -38,13 +39,15 @@ const Header = () => {
     <div className={s.root}>
       <div className={s.wrap}>
         <div className={s.pokemonLogo}>
-          <PokemonLogo />
+          <Link to="/">
+            <PokemonLogo />
+          </Link>
         </div>
         <div className={s.menuWrap}>
           {MENU.map(({ value, link, id }) => (
-            <a className={s.menuLink} href={link} key={id}>
+            <Link className={s.menuLink} to={link} key={id}>
               {value}
-            </a>
+            </Link>
           ))}
         </div>
       </div>
