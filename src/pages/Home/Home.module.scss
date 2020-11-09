@@ -1,0 +1,16 @@
+@import '../../variables';
+
+.root {
+  min-height: 100vh;
+  background: linear-gradient(180deg, $third 0%, $primary 100%);
+}
+
+.contentText {
+  display: flex;
+  flex-direction: column;
+}
+.contentWrap {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+}
