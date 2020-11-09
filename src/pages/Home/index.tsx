@@ -1,6 +1,7 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import Button from '../../components/Button';
+import Header from '../../components/Header';
 import Heading from '../../components/Heading/Heading';
 import Layout from '../../components/Layout/index';
 import Parallax from '../../components/Parallax/Parallax';
@@ -12,6 +13,7 @@ function HomePage() {
 
   return (
     <div className={s.root}>
+      <Header />
       <Layout className={s.contentWrap}>
         <div className={s.contentText}>
           <Heading level="h1">
