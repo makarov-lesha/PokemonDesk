@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { A } from 'hookrouter';
 
 import s from './Header.module.scss';
 import { ReactComponent as PokemonLogo } from './assets/Logo.svg';
@@ -39,15 +39,15 @@ const Header = () => {
     <div className={s.root}>
       <div className={s.wrap}>
         <div className={s.pokemonLogo}>
-          <Link to="/">
+          <A href="/">
             <PokemonLogo />
-          </Link>
+          </A>
         </div>
         <div className={s.menuWrap}>
           {MENU.map(({ value, link, id }) => (
-            <Link className={s.menuLink} to={link} key={id}>
+            <A className={s.menuLink} href={link} key={id}>
               {value}
-            </Link>
+            </A>
           ))}
         </div>
       </div>
