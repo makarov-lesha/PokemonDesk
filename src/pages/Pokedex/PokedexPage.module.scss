@@ -1,0 +1,11 @@
+@import '../../variables';
+
+.root {
+  background-color: transparent;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-row-gap: 35px;
+  grid-column-gap: 35px;
+  grid-template-columns: repeat(auto-fit, minmax(351px, 1fr));
+}
