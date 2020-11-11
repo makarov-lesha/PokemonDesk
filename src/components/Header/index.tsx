@@ -1,53 +1,26 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { A, usePath } from 'hookrouter';
+import clx from 'classnames';
 
 import s from './Header.module.scss';
 import { ReactComponent as PokemonLogo } from './assets/Logo.svg';
-
-interface IMenu {
-  id: number;
-  value: string;
-  link: string;
-}
-
-const MENU: IMenu[] = [
-  {
-    id: 1,
-    value: 'Home',
-    link: '/',
-  },
-  {
-    id: 2,
-    value: 'Pokédex',
-    link: '/pokedex',
-  },
-  {
-    id: 3,
-    value: 'Legendaries',
-    link: '/legendaries',
-  },
-
-  {
-    id: 4,
-    value: 'Documentation',
-    link: '/documentation',
-  },
-];
+import { GENERAL_MENU } from '../../routes';
 
 const Header = () => {
+  const path = usePath();
   return (
     <div className={s.root}>
       <div className={s.wrap}>
         <div className={s.pokemonLogo}>
-          <Link to="/">
+          <A href="/">
             <PokemonLogo />
-          </Link>
+          </A>
         </div>
         <div className={s.menuWrap}>
-          {MENU.map(({ value, link, id }) => (
-            <Link className={s.menuLink} to={link} key={id}>
-              {value}
-            </Link>
+          {GENERAL_MENU.map(({ title, link }) => (
+            <A className={clx(s.menuLink, { [s.activeLink]: link === path })} href={link} key={title}>
+              {title}
+            </A>
           ))}
         </div>
       </div>
