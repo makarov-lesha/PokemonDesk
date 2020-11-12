@@ -3,16 +3,15 @@ import Heading from '../Heading/Heading';
 
 import s from './PokemonCard.module.scss';
 
-import { IPokemons } from '../../pages/Pokedex/pokemons';
+import { IPokemon } from '../../api/pokemons';
+// import { GENERAL_MENU } from '../../routes';
 
 interface IPokemonProps {
-  pokemonParams: IPokemons;
+  pokemonParams: IPokemon;
   key?: any;
 }
 
 const PokemonCard: React.FC<IPokemonProps> = ({ pokemonParams }) => {
-  console.log('pokemonParams', pokemonParams);
-
   return (
     <div className={s.root}>
       <div className={s.infoWrap}>

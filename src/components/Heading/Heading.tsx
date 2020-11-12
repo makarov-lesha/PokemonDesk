@@ -8,7 +8,7 @@ interface IHeadingProps {
 }
 
 const Heading: React.FC<IHeadingProps> = ({ children, level = 'h1', ...props }) => {
-  console.log(props);
+  
   return React.createElement(`${level}`, { ...props }, children);
 };
 

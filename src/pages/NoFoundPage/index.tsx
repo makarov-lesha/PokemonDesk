@@ -4,6 +4,7 @@ import { navigate } from 'hookrouter';
 import s from './NotFoundPage.module.scss';
 import RocketTeam from './assets/teamRocket.png';
 import Button from '../../components/Button';
+import { LinkEnum } from '../../routes';
 
 const NotFoundPage = () => {
   return (
@@ -16,7 +17,7 @@ const NotFoundPage = () => {
       </div>
       <Button
         onClick={() => {
-          navigate('/');
+          navigate(LinkEnum.HOME);
         }}>
         Return
       </Button>
