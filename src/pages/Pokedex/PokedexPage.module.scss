@@ -9,3 +9,12 @@
   grid-column-gap: 35px;
   grid-template-columns: repeat(auto-fit, minmax(351px, 1fr));
 }
+
+.inputStyle {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}

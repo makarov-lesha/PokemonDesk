@@ -2,8 +2,8 @@ import Url from 'url';
 import getUrlWithParamsConfig from './getUrlWithParamsConfig';
 import { EndpointType } from '../config';
 
-async function req(endpoint: EndpointType) {
-  const uri = Url.format(getUrlWithParamsConfig(endpoint));
+async function req(endpoint: EndpointType, query?: object) {
+  const uri = Url.format(getUrlWithParamsConfig(endpoint, query));
   console.log('req -> uri', uri);
 
   const response = await fetch(uri);
