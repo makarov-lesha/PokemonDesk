@@ -1,5 +1,6 @@
 /* eslint-disable camelcase */
 import { useEffect, useState } from 'react';
+import config from '../../config';
 
 export interface IPokemon {
   abilities: string[];
@@ -37,8 +38,9 @@ export const usePokemons = (amount: number = 10) => {
   useEffect(() => {
     const getPokemons = async () => {
       setIsLoading(true);
+      const url = `${config.client.server.protocol}://${config.client.server.host}${config.client.endpoint.getPokemons.uri.pathname}`;
       try {
-        const response = await fetch(`http://zar.hosthot.ru/api/v1/pokemons?limit=${amount}`);
+        const response = await fetch(url);
         const result = await response.json();
         setData(result);
       } catch (e) {
@@ -46,6 +48,7 @@ export const usePokemons = (amount: number = 10) => {
       } finally {
         setIsLoading(false);
       }
+      console.log('usePokemons -> url', url);
     };
     getPokemons();
   }, [amount]);
