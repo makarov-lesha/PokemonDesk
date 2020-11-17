@@ -2,12 +2,12 @@
 import React from 'react';
 import Layout from '../../components/Layout/index';
 import PokemonCard from '../../components/PokemonCard';
-import { usePokemons } from '../../api/pokemons';
+import useData from '../../hook/getData';
 
 import s from './PokedexPage.module.scss';
 
 const PokedexPage = () => {
-  const { data, isLoading, isError } = usePokemons();
+  const { data, isLoading, isError } = useData('getPokemons');
 
   if (isLoading) {
     return <div>Loading...</div>;
