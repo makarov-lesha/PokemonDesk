@@ -1,6 +1,6 @@
 /* eslint-disable camelcase */
 import { useEffect, useState } from 'react';
-import config from '../../config';
+import req from '../utils/request';
 
 export interface IPokemon {
   abilities: string[];
@@ -30,7 +30,7 @@ export interface IData {
   pokemons: IPokemon[];
 }
 
-export const usePokemons = (amount: number = 10) => {
+export const usePokemons = () => {
   const [data, setData] = useState<IData | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
@@ -38,20 +38,17 @@ export const usePokemons = (amount: number = 10) => {
   useEffect(() => {
     const getPokemons = async () => {
       setIsLoading(true);
-      const url = `${config.client.server.protocol}://${config.client.server.host}${config.client.endpoint.getPokemons.uri.pathname}`;
       try {
-        const response = await fetch(url);
-        const result = await response.json();
+        const result = await req('getPokemons');
         setData(result);
       } catch (e) {
         setIsError(true);
       } finally {
         setIsLoading(false);
       }
-      console.log('usePokemons -> url', url);
     };
     getPokemons();
-  }, [amount]);
+  }, []);
 
   return { data, isLoading, isError };
 };

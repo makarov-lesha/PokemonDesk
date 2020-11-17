@@ -7,7 +7,7 @@ import { usePokemons } from '../../api/pokemons';
 import s from './PokedexPage.module.scss';
 
 const PokedexPage = () => {
-  const { data, isLoading, isError } = usePokemons(100);
+  const { data, isLoading, isError } = usePokemons();
 
   if (isLoading) {
     return <div>Loading...</div>;

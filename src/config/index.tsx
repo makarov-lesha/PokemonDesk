@@ -15,4 +15,6 @@ const config = {
   },
 };
 
+export type EndpointType = 'getPokemons';
+
 export default config;

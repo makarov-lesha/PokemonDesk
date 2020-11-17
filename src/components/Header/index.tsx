@@ -7,8 +7,6 @@ import { ReactComponent as PokemonLogo } from './assets/Logo.svg';
 import { GENERAL_MENU } from '../../routes';
 
 const Header = () => {
-  console.log('Header rendered');
-
   const path = usePath();
   return (
     <div className={s.root}>
