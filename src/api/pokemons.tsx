@@ -30,7 +30,7 @@ export interface IData {
 }
 
 export const usePokemons = (amount: number = 10) => {
-  const [data, setData] = useState<IData>({});
+  const [data, setData] = useState<IData | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
 

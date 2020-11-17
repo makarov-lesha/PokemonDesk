@@ -5,7 +5,6 @@ import PokemonCard from '../../components/PokemonCard';
 import { usePokemons } from '../../api/pokemons';
 
 import s from './PokedexPage.module.scss';
-import Heading from '../../components/Heading/Heading';
 
 const PokedexPage = () => {
   const { data, isLoading, isError } = usePokemons(100);
@@ -24,9 +23,7 @@ const PokedexPage = () => {
     <>
       <Layout>
         <div className={s.root}>
-          {data.pokemons.map((item, index) => (
-            <PokemonCard key={item.name} pokemonParams={item} />
-          ))}
+          {data && data.pokemons.map((item, index) => <PokemonCard key={item.name} pokemonParams={item} />)}
         </div>
       </Layout>
     </>
