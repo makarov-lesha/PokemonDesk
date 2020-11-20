@@ -3,8 +3,7 @@ import Heading from '../Heading/Heading';
 
 import s from './PokemonCard.module.scss';
 
-import { IPokemon } from '../../api/pokemons';
-// import { GENERAL_MENU } from '../../routes';
+import { IPokemon } from '../../hook/getData';
 
 interface IPokemonProps {
   pokemonParams: IPokemon;

@@ -1,5 +1,7 @@
 /* eslint-disable camelcase */
 import { useEffect, useState } from 'react';
+import req from '../utils/request';
+import { EndpointType } from '../config';
 
 export interface IPokemon {
   abilities: string[];
@@ -29,17 +31,16 @@ export interface IData {
   pokemons: IPokemon[];
 }
 
-export const usePokemons = (amount: number = 10) => {
-  const [data, setData] = useState<IData>({});
+const useData = (endpoint: EndpointType, query?: object, deps: any[] = []) => {
+  const [data, setData] = useState<IData | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
 
   useEffect(() => {
-    const getPokemons = async () => {
+    const getData = async () => {
       setIsLoading(true);
       try {
-        const response = await fetch(`http://zar.hosthot.ru/api/v1/pokemons?limit=${amount}`);
-        const result = await response.json();
+        const result = await req(endpoint, query);
         setData(result);
       } catch (e) {
         setIsError(true);
@@ -47,8 +48,10 @@ export const usePokemons = (amount: number = 10) => {
         setIsLoading(false);
       }
     };
-    getPokemons();
-  }, [amount]);
+    getData();
+  }, deps);
 
   return { data, isLoading, isError };
 };
+
+export default useData;
