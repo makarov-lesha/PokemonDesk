@@ -3,14 +3,19 @@ import React, { useState } from 'react';
 import Layout from '../../components/Layout/index';
 import PokemonCard from '../../components/PokemonCard';
 import useData from '../../hook/getData';
+import { IPokemons, IPokemon } from '../../interface/pokemon';
 
 import s from './PokedexPage.module.scss';
 
+interface IQuery {
+  name?: string;
+}
+
 const PokedexPage = () => {
   const [searchValue, setSearchValue] = useState('');
-  const [query, setQuery] = useState({});
+  const [query, setQuery] = useState<IQuery>({});
 
-  const { data, isLoading, isError } = useData('getPokemons', query, [searchValue]);
+  const { data, isLoading, isError } = useData<IPokemons>('getPokemons', query, [searchValue]);
 
   // if (isLoading) {
   //   return <div>Loading...</div>;
@@ -22,8 +27,8 @@ const PokedexPage = () => {
 
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchValue(e.target.value);
-    setQuery((s) => ({
-      ...s,
+    setQuery((state: IQuery) => ({
+      ...state,
       name: e.target.value,
     }));
   };
@@ -40,7 +45,7 @@ const PokedexPage = () => {
         <div className={s.root}>
           {!isLoading &&
             data &&
-            data.pokemons.map((item, index) => <PokemonCard key={item.name} pokemonParams={item} />)}
+            data.pokemons.map((item: IPokemon) => <PokemonCard key={item.name} pokemonParams={item} />)}
         </div>
       </Layout>
     </>

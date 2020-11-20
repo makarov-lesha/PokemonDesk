@@ -3,7 +3,7 @@ import Heading from '../Heading/Heading';
 
 import s from './PokemonCard.module.scss';
 
-import { IPokemon } from '../../hook/getData';
+import { IPokemon } from '../../interface/pokemon';
 
 interface IPokemonProps {
   pokemonParams: IPokemon;
