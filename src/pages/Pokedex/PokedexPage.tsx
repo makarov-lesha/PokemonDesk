@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Layout from '../../components/Layout/index';
 import PokemonCard from '../../components/PokemonCard';
 import useData from '../../hook/getData';
+import useDebounce from '../../hook/useDebounce';
 import { IPokemons, IPokemon } from '../../interface/pokemon';
 
 import s from './PokedexPage.module.scss';
@@ -14,12 +15,9 @@ interface IQuery {
 const PokedexPage = () => {
   const [searchValue, setSearchValue] = useState('');
   const [query, setQuery] = useState<IQuery>({});
+  const debouncedValue = useDebounce(searchValue, 500);
 
-  const { data, isLoading, isError } = useData<IPokemons>('getPokemons', query, [searchValue]);
-
-  // if (isLoading) {
-  //   return <div>Loading...</div>;
-  // }
+  const { data, isLoading, isError } = useData<IPokemons>('getPokemons', query, [debouncedValue]);
 
   if (isError) {
     return <div>Something went wrong...</div>;
@@ -32,8 +30,6 @@ const PokedexPage = () => {
       name: e.target.value,
     }));
   };
-
-  console.log('data:', data);
 
   return (
     <>
