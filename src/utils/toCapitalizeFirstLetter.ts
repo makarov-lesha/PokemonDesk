@@ -3,7 +3,7 @@ export default function toCapitalizeFirstLetter(input?: string) {
     return '';
   }
 
-  let result = input?.toLowerCase();
+  let result = input.toLowerCase();
 
   if (result.length > 1) {
     result = result.charAt(0).toUpperCase() + result.slice(1);
