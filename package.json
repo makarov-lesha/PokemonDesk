@@ -14,6 +14,7 @@
   "author": "Alexey Makarov <makarov.lesha@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "@hapi/hapi": "^20.0.3",
     "@types/react-router-dom": "^5.1.6",
     "classnames": "^2.2.6",
     "cross-env": "^7.0.2",
