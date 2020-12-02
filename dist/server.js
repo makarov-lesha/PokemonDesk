@@ -549,7 +549,7 @@
       /***/ function (module, exports, __webpack_require__) {
         'use strict';
         eval(
-          '\r\nvar __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {\r\n    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }\r\n    return new (P || (P = Promise))(function (resolve, reject) {\r\n        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }\r\n        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }\r\n        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }\r\n        step((generator = generator.apply(thisArg, _arguments || [])).next());\r\n    });\r\n};\r\nvar __importDefault = (this && this.__importDefault) || function (mod) {\r\n    return (mod && mod.__esModule) ? mod : { "default": mod };\r\n};\r\nObject.defineProperty(exports, "__esModule", { value: true });\r\nconst hapi_1 = __importDefault(__webpack_require__(/*! @hapi/hapi */ "@hapi/hapi"));\r\nconst react_1 = __importDefault(__webpack_require__(/*! react */ "react"));\r\nconst server_1 = __importDefault(__webpack_require__(/*! react-dom/server */ "react-dom/server"));\r\nconst hookrouter_1 = __webpack_require__(/*! hookrouter */ "hookrouter");\r\nconst App_1 = __importDefault(__webpack_require__(/*! ../App */ "./src/App.tsx"));\r\nconst init = () => __awaiter(void 0, void 0, void 0, function* () {\r\n    const server = hapi_1.default.server({\r\n        port: 3000,\r\n        host: \'localhost\',\r\n    });\r\n    server.route({\r\n        method: \'GET\',\r\n        path: \'/{any*}\',\r\n        handler: (request) => {\r\n            hookrouter_1.setPath(request.path);\r\n            const result = server_1.default.renderToString(react_1.default.createElement(App_1.default, null));\r\n            return result;\r\n        },\r\n    });\r\n    yield server.start();\r\n    console.log(\'Server running on %s\', server.info.uri);\r\n});\r\nprocess.on(\'unhandledRejection\', (err) => {\r\n    console.log(err);\r\n    process.exit(1);\r\n});\r\ninit();\r\n\n\n//# sourceURL=webpack:///./src/server/server.js?',
+          '\r\nvar __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {\r\n    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }\r\n    return new (P || (P = Promise))(function (resolve, reject) {\r\n        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }\r\n        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }\r\n        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }\r\n        step((generator = generator.apply(thisArg, _arguments || [])).next());\r\n    });\r\n};\r\nvar __importDefault = (this && this.__importDefault) || function (mod) {\r\n    return (mod && mod.__esModule) ? mod : { "default": mod };\r\n};\r\nObject.defineProperty(exports, "__esModule", { value: true });\r\nconst fs_1 = __importDefault(__webpack_require__(/*! fs */ "fs"));\r\nconst path_1 = __importDefault(__webpack_require__(/*! path */ "path"));\r\nconst handlebars_1 = __importDefault(__webpack_require__(/*! handlebars */ "handlebars"));\r\nconst hapi_1 = __importDefault(__webpack_require__(/*! @hapi/hapi */ "@hapi/hapi"));\r\nconst react_1 = __importDefault(__webpack_require__(/*! react */ "react"));\r\nconst server_1 = __importDefault(__webpack_require__(/*! react-dom/server */ "react-dom/server"));\r\nconst hookrouter_1 = __webpack_require__(/*! hookrouter */ "hookrouter");\r\nconst App_1 = __importDefault(__webpack_require__(/*! ../App */ "./src/App.tsx"));\r\nconst init = () => __awaiter(void 0, void 0, void 0, function* () {\r\n    const server = hapi_1.default.server({\r\n        port: 3000,\r\n        host: \'localhost\',\r\n    });\r\n    yield server.register(__webpack_require__(/*! @hapi/inert */ "@hapi/inert"));\r\n    server.route({\r\n        method: \'GET\',\r\n        path: \'/main.js\',\r\n        handler: (request, h) => h.file(path_1.default.join(process.cwd(), \'dist\', \'main.js\')),\r\n    });\r\n    server.route({\r\n        method: \'GET\',\r\n        path: \'/{any*}\',\r\n        handler: (request) => {\r\n            hookrouter_1.setPath(request.path);\r\n            const pathIndexHTML = path_1.default.join(process.cwd(), \'dist\', \'index.html\');\r\n            const template = handlebars_1.default.compile(fs_1.default.readFileSync(pathIndexHTML, \'utf8\'));\r\n            const result = server_1.default.renderToString(react_1.default.createElement(App_1.default, null));\r\n            const page = template({\r\n                content: result,\r\n            });\r\n            return page;\r\n        },\r\n    });\r\n    yield server.start();\r\n    console.log(\'Server running on %s\', server.info.uri);\r\n});\r\nprocess.on(\'unhandledRejection\', (err) => {\r\n    console.log(err);\r\n    process.exit(1);\r\n});\r\ninit();\r\n\n\n//# sourceURL=webpack:///./src/server/server.js?',
         );
 
         /***/
@@ -594,6 +594,17 @@
         /***/
       },
 
+    /***/ '@hapi/inert':
+      /*!******************************!*\
+  !*** external "@hapi/inert" ***!
+  \******************************/
+      /*! no static exports found */
+      /***/ function (module, exports) {
+        eval('module.exports = require("@hapi/inert");\n\n//# sourceURL=webpack:///external_%22@hapi/inert%22?');
+
+        /***/
+      },
+
     /***/ classnames:
       /*!*****************************!*\
   !*** external "classnames" ***!
@@ -605,6 +616,28 @@
         /***/
       },
 
+    /***/ fs:
+      /*!*********************!*\
+  !*** external "fs" ***!
+  \*********************/
+      /*! no static exports found */
+      /***/ function (module, exports) {
+        eval('module.exports = require("fs");\n\n//# sourceURL=webpack:///external_%22fs%22?');
+
+        /***/
+      },
+
+    /***/ handlebars:
+      /*!*****************************!*\
+  !*** external "handlebars" ***!
+  \*****************************/
+      /*! no static exports found */
+      /***/ function (module, exports) {
+        eval('module.exports = require("handlebars");\n\n//# sourceURL=webpack:///external_%22handlebars%22?');
+
+        /***/
+      },
+
     /***/ hookrouter:
       /*!*****************************!*\
   !*** external "hookrouter" ***!
@@ -612,6 +645,17 @@
       /*! no static exports found */
       /***/ function (module, exports) {
         eval('module.exports = require("hookrouter");\n\n//# sourceURL=webpack:///external_%22hookrouter%22?');
+
+        /***/
+      },
+
+    /***/ path:
+      /*!***********************!*\
+  !*** external "path" ***!
+  \***********************/
+      /*! no static exports found */
+      /***/ function (module, exports) {
+        eval('module.exports = require("path");\n\n//# sourceURL=webpack:///external_%22path%22?');
 
         /***/
       },
