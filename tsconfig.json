@@ -66,5 +66,5 @@
     "skipLibCheck": true /* Skip type checking of declaration files. */,
     "forceConsistentCasingInFileNames": true /* Disallow inconsistently-cased references to the same file. */
   },
-  "exclude": ["dist", "./webpack.config.js"]
+  "exclude": ["dist", "./webpack.config.js", "./webpack.client.config.js", "./webpack.server.config.js"]
 }
