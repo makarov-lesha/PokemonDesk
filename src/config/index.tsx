@@ -11,10 +11,16 @@ const config = {
           pathname: '/api/v1/pokemons',
         },
       },
+      getPokemon: {
+        method: 'GET',
+        uri: {
+          pathname: '/api/v1/pokemon/{id}',
+        },
+      },
     },
   },
 };
 
-export type EndpointType = 'getPokemons';
+export type EndpointType = keyof typeof config.client.endpoint;
 
 export default config;
