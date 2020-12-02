@@ -707,10 +707,10 @@
         /***/
       },
 
-    /***/ './node_modules/css-modules-typescript-loader/index.js?modules!./node_modules/css-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js!./src/pages/NoFoundPage/NotFoundPage.module.scss':
-      /*!****************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-modules-typescript-loader?modules!./node_modules/css-loader/dist/cjs.js??ref--6-2!./node_modules/sass-loader/dist/cjs.js!./src/pages/NoFoundPage/NotFoundPage.module.scss ***!
-  \****************************************************************************************************************************************************************************************************/
+    /***/ './node_modules/css-modules-typescript-loader/index.js?modules!./node_modules/css-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js!./src/pages/NotFoundPage/NotFoundPage.module.scss':
+      /*!*****************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-modules-typescript-loader?modules!./node_modules/css-loader/dist/cjs.js??ref--6-2!./node_modules/sass-loader/dist/cjs.js!./src/pages/NotFoundPage/NotFoundPage.module.scss ***!
+  \*****************************************************************************************************************************************************************************************************/
       /*! exports provided: default */
       /***/ function (module, __webpack_exports__, __webpack_require__) {
         'use strict';
@@ -735,11 +735,11 @@
         // Module
         ___CSS_LOADER_EXPORT___.push([
           module.i,
-          '.NotFoundPage-module__root__8SiF0 {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  min-height: 100vh;\n  background-color: red; }\n\n.NotFoundPage-module__error404__1pPrY {\n  font-family: Karla;\n  font-style: normal;\n  font-weight: bold;\n  font-size: 402px;\n  line-height: 470px;\n  /* identical to box height */\n  display: flex;\n  align-items: center;\n  letter-spacing: 4px;\n  color: rgba(0, 0, 0, 0.5); }\n\n.NotFoundPage-module__rocketTeam__26MxN {\n  position: absolute; }\n\n.NotFoundPage-module__wording__3BmRK {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  margin-top: 10rem;\n  font-family: Karla;\n  font-style: normal;\n  font-weight: bold;\n  font-size: 45px;\n  line-height: 53px;\n  text-align: center; }\n\n.NotFoundPage-module__whiteText__Q9JbY {\n  color: white; }\n',
+          '.NotFoundPage-module__root__ZJbUJ {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  min-height: 100vh;\n  background-color: red; }\n\n.NotFoundPage-module__error404__2mx7U {\n  font-family: Karla;\n  font-style: normal;\n  font-weight: bold;\n  font-size: 402px;\n  line-height: 470px;\n  /* identical to box height */\n  display: flex;\n  align-items: center;\n  letter-spacing: 4px;\n  color: rgba(0, 0, 0, 0.5); }\n\n.NotFoundPage-module__rocketTeam__aNIpk {\n  position: absolute; }\n\n.NotFoundPage-module__wording__1_J0X {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  margin-top: 10rem;\n  font-family: Karla;\n  font-style: normal;\n  font-weight: bold;\n  font-size: 45px;\n  line-height: 53px;\n  text-align: center; }\n\n.NotFoundPage-module__whiteText__260rq {\n  color: white; }\n',
           '',
           {
             version: 3,
-            sources: ['webpack://src/pages/NoFoundPage/NotFoundPage.module.scss'],
+            sources: ['webpack://src/pages/NotFoundPage/NotFoundPage.module.scss'],
             names: [],
             mappings:
               'AAAA;EACE,aAAa;EACb,sBAAsB;EACtB,mBAAmB;EACnB,uBAAuB;EACvB,iBAAiB;EACjB,qBAAqB,EAAA;;AAGvB;EACE,kBAAkB;EAClB,kBAAkB;EAClB,iBAAiB;EACjB,gBAAgB;EAChB,kBAAkB;EAClB,4BAAA;EAEA,aAAa;EACb,mBAAmB;EACnB,mBAAmB;EAEnB,yBAAyB,EAAA;;AAG3B;EACE,kBAAkB,EAAA;;AAGpB;EACE,aAAa;EACb,sBAAsB;EACtB,mBAAmB;EACnB,iBAAiB;EAEjB,kBAAkB;EAClB,kBAAkB;EAClB,iBAAiB;EACjB,eAAe;EACf,iBAAiB;EACjB,kBAAkB,EAAA;;AAGpB;EACE,YAAY,EAAA',
@@ -751,11 +751,11 @@
         ]);
         // Exports
         ___CSS_LOADER_EXPORT___.locals = {
-          root: 'NotFoundPage-module__root__8SiF0',
-          error404: 'NotFoundPage-module__error404__1pPrY',
-          rocketTeam: 'NotFoundPage-module__rocketTeam__26MxN',
-          wording: 'NotFoundPage-module__wording__3BmRK',
-          whiteText: 'NotFoundPage-module__whiteText__Q9JbY',
+          root: 'NotFoundPage-module__root__ZJbUJ',
+          error404: 'NotFoundPage-module__error404__2mx7U',
+          rocketTeam: 'NotFoundPage-module__rocketTeam__aNIpk',
+          wording: 'NotFoundPage-module__wording__1_J0X',
+          whiteText: 'NotFoundPage-module__whiteText__260rq',
         };
         /* harmony default export */ __webpack_exports__['default'] = ___CSS_LOADER_EXPORT___;
 
@@ -36489,8 +36489,8 @@ object-assign
         Object.defineProperty(exports, '__esModule', { value: true });
         const react_1 = __importDefault(__webpack_require__(/*! react */ './node_modules/react/index.js'));
         const hookrouter_1 = __webpack_require__(/*! hookrouter */ './node_modules/hookrouter/dist/index.js');
-        const NoFoundPage_1 = __importDefault(
-          __webpack_require__(/*! ./pages/NoFoundPage */ './src/pages/NoFoundPage/index.tsx'),
+        const NotFoundPage_1 = __importDefault(
+          __webpack_require__(/*! ./pages/NotFoundPage */ './src/pages/NotFoundPage/index.tsx'),
         );
         // import s from './App.module.scss';
         const routes_1 = __importDefault(__webpack_require__(/*! ./routes */ './src/routes.tsx'));
@@ -36506,7 +36506,7 @@ object-assign
                 react_1.default.createElement(Header_1.default, null),
                 match,
               )
-            : react_1.default.createElement(NoFoundPage_1.default, null);
+            : react_1.default.createElement(NotFoundPage_1.default, null);
         };
         exports.default = App;
 
@@ -37735,10 +37735,10 @@ object-assign
         /***/
       },
 
-    /***/ './src/pages/NoFoundPage/NotFoundPage.module.scss':
-      /*!********************************************************!*\
-  !*** ./src/pages/NoFoundPage/NotFoundPage.module.scss ***!
-  \********************************************************/
+    /***/ './src/pages/NotFoundPage/NotFoundPage.module.scss':
+      /*!*********************************************************!*\
+  !*** ./src/pages/NotFoundPage/NotFoundPage.module.scss ***!
+  \*********************************************************/
       /*! exports provided: default */
       /***/ function (module, __webpack_exports__, __webpack_require__) {
         'use strict';
@@ -37750,7 +37750,7 @@ object-assign
           _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__,
         );
         /* harmony import */ var _node_modules_css_modules_typescript_loader_index_js_modules_node_modules_css_loader_dist_cjs_js_ref_6_2_node_modules_sass_loader_dist_cjs_js_NotFoundPage_module_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-          /*! !../../../node_modules/css-modules-typescript-loader?modules!../../../node_modules/css-loader/dist/cjs.js??ref--6-2!../../../node_modules/sass-loader/dist/cjs.js!./NotFoundPage.module.scss */ './node_modules/css-modules-typescript-loader/index.js?modules!./node_modules/css-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js!./src/pages/NoFoundPage/NotFoundPage.module.scss',
+          /*! !../../../node_modules/css-modules-typescript-loader?modules!../../../node_modules/css-loader/dist/cjs.js??ref--6-2!../../../node_modules/sass-loader/dist/cjs.js!./NotFoundPage.module.scss */ './node_modules/css-modules-typescript-loader/index.js?modules!./node_modules/css-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js!./src/pages/NotFoundPage/NotFoundPage.module.scss',
         );
 
         var options = {};
@@ -37773,10 +37773,10 @@ object-assign
         /***/
       },
 
-    /***/ './src/pages/NoFoundPage/assets/teamRocket.png':
-      /*!*****************************************************!*\
-  !*** ./src/pages/NoFoundPage/assets/teamRocket.png ***!
-  \*****************************************************/
+    /***/ './src/pages/NotFoundPage/assets/teamRocket.png':
+      /*!******************************************************!*\
+  !*** ./src/pages/NotFoundPage/assets/teamRocket.png ***!
+  \******************************************************/
       /*! exports provided: default */
       /***/ function (module, __webpack_exports__, __webpack_require__) {
         'use strict';
@@ -37787,10 +37787,10 @@ object-assign
         /***/
       },
 
-    /***/ './src/pages/NoFoundPage/index.tsx':
-      /*!*****************************************!*\
-  !*** ./src/pages/NoFoundPage/index.tsx ***!
-  \*****************************************/
+    /***/ './src/pages/NotFoundPage/index.tsx':
+      /*!******************************************!*\
+  !*** ./src/pages/NotFoundPage/index.tsx ***!
+  \******************************************/
       /*! no static exports found */
       /***/ function (module, exports, __webpack_require__) {
         'use strict';
@@ -37804,10 +37804,10 @@ object-assign
         const react_1 = __importDefault(__webpack_require__(/*! react */ './node_modules/react/index.js'));
         const hookrouter_1 = __webpack_require__(/*! hookrouter */ './node_modules/hookrouter/dist/index.js');
         const NotFoundPage_module_scss_1 = __importDefault(
-          __webpack_require__(/*! ./NotFoundPage.module.scss */ './src/pages/NoFoundPage/NotFoundPage.module.scss'),
+          __webpack_require__(/*! ./NotFoundPage.module.scss */ './src/pages/NotFoundPage/NotFoundPage.module.scss'),
         );
         const teamRocket_png_1 = __importDefault(
-          __webpack_require__(/*! ./assets/teamRocket.png */ './src/pages/NoFoundPage/assets/teamRocket.png'),
+          __webpack_require__(/*! ./assets/teamRocket.png */ './src/pages/NotFoundPage/assets/teamRocket.png'),
         );
         const Button_1 = __importDefault(
           __webpack_require__(/*! ../../components/Button */ './src/components/Button/index.tsx'),
