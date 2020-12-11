@@ -1,6 +1,6 @@
 import React from 'react';
 import { useRoutes } from 'hookrouter';
-import NotFoundPage from './pages/NoFoundPage';
+import NotFoundPage from './pages/NotFoundPage';
 
 // import s from './App.module.scss';
 import routes from './routes';

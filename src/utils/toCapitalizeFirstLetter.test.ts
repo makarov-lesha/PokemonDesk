@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-unresolved
 import toCapitalizeFirstLetter from './toCapitalizeFirstLetter';
 
 describe('ToCapitalizeFirstLetter function', () => {
